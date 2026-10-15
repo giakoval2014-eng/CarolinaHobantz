@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fff8f2;color:#201b10;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary":"#206381","surface-container-highest":"#ede1cf","surface":"#fff8f2","on-primary-container":"#fefdff","on-primary-fixed-variant":"#004d68","outline-variant":"#c0c7ce","surface-container-low":"#fef2e0","error":"#ba1a1a","on-tertiary-fixed":"#00201f","tertiary-container":"#35807d","on-primary-fixed":"#001e2c","primary-container":"#3e7c9b","on-secondary-fixed":"#360f02","surface-container":"#f8ecda","on-surface":"#201b10","tertiary":"#126764","inverse-surface":"#363024","on-secondary-fixed-variant":"#6c3926","background":"#fff8f2","on-background":"#201b10","secondary-fixed":"#ffdbcf","surface-container-high":"#f3e7d5","primary-fixed":"#c3e8ff","error-container":"#ffdad6","on-error":"#ffffff","surface-container-lowest":"#ffffff","surface-dim":"#e4d9c7","inverse-primary":"#92cef0","on-error-container":"#93000a","inverse-on-surface":"#fbefdd","surface-bright":"#fff8f2","secondary-container":"#fdb298","on-secondary":"#ffffff","surface-tint":"#226583","tertiary-fixed-dim":"#8ad3cf","on-surface-variant":"#40484d","on-primary":"#ffffff","on-tertiary":"#ffffff","secondary-fixed-dim":"#ffb59b","on-tertiary-container":"#f5fffd","on-tertiary-fixed-variant":"#00504d","primary-fixed-dim":"#92cef0","surface-variant":"#ede1cf","outline":"#70787e","tertiary-fixed":"#a6f0eb","on-secondary-container":"#78422e","secondary":"#894f3b"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin":"3rem","gutter":"1.5rem","space-lg":"1.75rem","margin-mobile":"1.25rem","space-xl":"3rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter-mobile":"1rem","space-md":"1rem"},fontFamily:{"label-lg":["Nunito Sans"],"title-lg":["Nunito Sans"],"headline-lg":["EB Garamond"],"title-md":["Nunito Sans"],"display-lg":["EB Garamond"],"body-lg":["Nunito Sans"],"label-sm":["Nunito Sans"],"body-sm":["Nunito Sans"],"display-lg-mobile":["EB Garamond"],"label-md":["Nunito Sans"],"headline-lg-mobile":["EB Garamond"],"headline-sm":["EB Garamond"],"headline-md":["EB Garamond"],"body-md":["Nunito Sans"]},fontSize:{"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.04em",fontWeight:"600"}],"title-lg":["20px",{lineHeight:"28px",fontWeight:"700"}],"headline-lg":["40px",{lineHeight:"48px",fontWeight:"400"}],"title-md":["16px",{lineHeight:"24px",fontWeight:"600"}],"display-lg":["56px",{lineHeight:"64px",letterSpacing:"-0.01em",fontWeight:"400"}],"body-lg":["18px",{lineHeight:"28px",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.06em",fontWeight:"700"}],"body-sm":["13px",{lineHeight:"20px",fontWeight:"400"}],"display-lg-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.01em",fontWeight:"400"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.05em",fontWeight:"600"}],"headline-lg-mobile":["28px",{lineHeight:"36px",fontWeight:"400"}],"headline-sm":["24px",{lineHeight:"32px",fontWeight:"500"}],"headline-md":["30px",{lineHeight:"38px",fontWeight:"500"}],"body-md":["15px",{lineHeight:"24px",fontWeight:"400"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen relative"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_12px_rgba(43,74,90,0.06)]"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm tracking-wide text-on-surface select-none">Carolina Hobant</span></div><div class="flex items-center gap-space-xs"><span class="text-label-sm font-label-sm uppercase tracking-widest text-primary hidden sm:inline-block">Inicio</span><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface pb-28"><div class="flex flex-col w-full text-on-surface">
+<!-- HERO SECTION -->
+<section class="w-full relative px-margin-mobile pt-space-md pb-space-xl flex flex-col items-center text-center overflow-hidden" id="inicio">
+<!-- Ambient Wave Background Graphic -->
+<div class="absolute inset-0 pointer-events-none opacity-40 -z-10">
+<svg class="w-full h-full" fill="none" preserveaspectratio="none" viewbox="0 0 400 400">
+<path d="M-50,220 C100,180 250,260 450,210 L450,450 L-50,450 Z" fill="#ede1cf" opacity="0.6"></path>
+<path d="M-50,280 C90,250 220,320 450,270 L450,450 L-50,450 Z" fill="#f8ecda" opacity="0.8"></path>
+</svg>
+</div>
+<!-- Free Shipping Badge -->
+<div class="inline-flex items-center gap-space-xs px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">local_shipping</span>
+<span class="font-label-sm text-label-sm tracking-widest uppercase">Envío gratis a todo el país • Hecho a mano</span>
+</div>
+<!-- Editorial Typography Title -->
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight max-w-sm mb-space-sm">
+      Vive el verano a tu ritmo
+    </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mx-auto mb-space-lg leading-relaxed">
+      Piezas artesanales tejidas con fibras naturales, inspiradas en la calma del mar y creadas para acompañar tus mejores atardeceres.
+    </p>
+<!-- Call to action button -->
+<div class="flex flex-col sm:flex-row gap-space-sm w-full max-w-xs mb-space-xl">
+<a class="w-full py-3.5 px-6 rounded-lg bg-tertiary text-on-tertiary font-title-md text-title-md text-center shadow-md hover:bg-tertiary-container active:scale-95 transition-all flex items-center justify-center gap-2" href="#coleccion">
+<span>Ver colección</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="w-full py-3.5 px-6 rounded-lg bg-surface-container-highest text-secondary font-title-md text-title-md text-center shadow-sm hover:bg-surface-container-high active:scale-95 transition-all" href="#tu-nombre">
+        Personalizar
+      </a>
+</div>
+<!-- Hat on Shore Artistic Vector Canvas Card -->
+<div class="w-full max-w-md bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col items-center relative overflow-hidden">
+<div class="w-full aspect-[4/3] rounded-lg bg-surface-container flex items-center justify-center relative overflow-hidden">
+<!-- SVG Beach Shore & Hat Art -->
+<svg class="w-full h-full" viewbox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="skyGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#c3e8ff"></stop>
+<stop offset="60%" stop-color="#fff8f2"></stop>
+</lineargradient>
+<lineargradient id="seaGrad" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0%" stop-color="#7fc8c4"></stop>
+<stop offset="100%" stop-color="#3e7c9b"></stop>
+</lineargradient>
+<lineargradient id="sandGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#ede1cf"></stop>
+<stop offset="100%" stop-color="#d4a373"></stop>
+</lineargradient>
+</defs>
+<!-- Sunlit Sky -->
+<rect fill="url(#skyGrad)" height="130" width="320"></rect>
+<circle cx="250" cy="50" fill="#fdb298" opacity="0.6" r="28"></circle>
+<!-- Sea Horizon -->
+<path d="M0,90 Q90,84 180,88 T320,86 L320,120 L0,120 Z" fill="url(#seaGrad)" opacity="0.75"></path>
+<!-- Soft Sea Foam Wave -->
+<path d="M0,116 C60,110 140,122 220,114 C270,109 300,115 320,113 L320,130 C270,132 180,126 100,130 L0,128 Z" fill="#ffffff" opacity="0.85"></path>
+<!-- Sand Bed -->
+<path d="M0,124 Q120,118 200,128 T320,122 L320,220 L0,220 Z" fill="url(#sandGrad)"></path>
+<!-- Tactile Woven Hat Silhouette Resting on Sand -->
+<g transform="translate(160, 155)">
+<!-- Hat Cast Shadow -->
+<ellipse cx="6" cy="18" fill="#5c4033" opacity="0.2" rx="86" ry="16"></ellipse>
+<!-- Wide Hat Brim -->
+<ellipse cx="0" cy="10" fill="#eadbc8" rx="84" ry="20"></ellipse>
+<ellipse cx="0" cy="10" fill="#fdfbf7" rx="80" ry="18"></ellipse>
+<path d="M -80,10 C -40,17 40,17 80,10 C 60,15 -60,15 -80,10 Z" fill="#d4a373" opacity="0.5"></path>
+<!-- Hat Crown Base -->
+<path d="M -34,10 C -36,-12 -28,-36 0,-36 C 28,-36 36,-12 34,10 Z" fill="#eadbc8"></path>
+<!-- Ribbon with Sea Accent -->
+<path d="M -35,5 C -15,9 15,9 35,5 L 35,12 C 15,15 -15,15 -35,12 Z" fill="#3e7c9b"></path>
+<!-- Gentle weave highlight -->
+<path d="M -18,-32 C 0,-34 18,-32 18,-30 C 0,-32 -18,-32 -18,-30 Z" fill="#ffffff" opacity="0.6"></path>
+</g>
+</svg>
+<span class="absolute bottom-3 left-3 px-2 py-0.5 rounded bg-surface/90 font-label-sm text-label-sm text-on-surface shadow-sm">
+          Paja Toquilla 100% natural
+        </span>
+</div>
+<div class="flex items-center justify-between w-full mt-3 px-1">
+<div class="flex items-center gap-1.5 text-tertiary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Pieza de Autor</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary">S/ 60</span>
+</div>
+</div>
+</section>
+<!-- COLLECTION SECTION -->
+<section class="w-full px-margin-mobile py-space-xl flex flex-col items-center" id="coleccion">
+<div class="text-center max-w-sm mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Catálogo Artesanal</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mt-1">Nuestra Colección</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+        Seis siluetas atemporales diseñadas para perdurar en cada viaje, resistentes a la brisa y suaves al tacto.
+      </p>
+</div>
+<!-- Highlight strip -->
+<div class="w-full max-w-md bg-surface-container-lowest rounded-full py-2 px-4 shadow-sm flex items-center justify-center gap-2 mb-space-lg text-secondary">
+<span class="material-symbols-outlined text-[18px]">palette</span>
+<span class="font-label-md text-label-md font-semibold">✨ Disponibles en 6 colores naturales</span>
+</div>
+<!-- 6 Products Stack / Responsive Grid -->
+<div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-space-lg max-w-xl">
+<!-- Product 1: Paja clásico -->
+<article class="product-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between" data-color="Crema" data-color-hex="#FDFBF7" data-model="Paja Clásico">
+<div>
+<!-- Dynamic Hat Illustration Canvas -->
+<div class="hat-visual w-full aspect-[4/3] rounded-lg bg-surface-container flex items-center justify-center relative overflow-hidden transition-colors duration-300">
+<svg class="w-3/4 h-3/4" viewbox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+<ellipse class="hat-brim-base fill-[#eadbc8] transition-colors duration-300" cx="100" cy="110" rx="80" ry="22"></ellipse>
+<ellipse class="hat-tint fill-[#fdfbf7] transition-colors duration-300" cx="100" cy="108" rx="76" ry="19"></ellipse>
+<path class="hat-tint fill-[#fdfbf7] transition-colors duration-300" d="M68,105 C65,70 75,50 100,50 C125,50 135,70 132,105 Z"></path>
+<path d="M68,100 C80,105 120,105 132,100 L132,107 C120,111 80,111 68,107 Z" fill="#894f3b"></path>
+</svg>
+<span class="absolute top-2 right-2 px-2 py-0.5 rounded bg-surface text-secondary font-label-sm text-label-sm shadow-sm">
+              S/ 60
+            </span>
+</div>
+<div class="mt-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary">Paja Clásico</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              El balance perfecto entre ligereza y tradición para días soleados frente al océano.
+            </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs">
+<!-- Color Picker -->
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold selected-color-label">Color: Crema</span>
+<span class="font-label-sm text-label-sm text-tertiary">Paja seleccionada</span>
+</div>
+<div class="flex items-center justify-between gap-1.5 color-picker-group py-1">
+<button aria-label="Crema" class="color-dot w-7 h-7 rounded-full bg-[#FDFBF7] shadow-sm transform transition-transform scale-110 ring-2 ring-primary" data-hex="#FDFBF7" data-name="Crema" type="button"></button>
+<button aria-label="Arena" class="color-dot w-7 h-7 rounded-full bg-[#EADBC8] shadow-sm transform transition-transform" data-hex="#EADBC8" data-name="Arena" type="button"></button>
+<button aria-label="Miel" class="color-dot w-7 h-7 rounded-full bg-[#D4A373] shadow-sm transform transition-transform" data-hex="#D4A373" data-name="Miel" type="button"></button>
+<button aria-label="Caramelo" class="color-dot w-7 h-7 rounded-full bg-[#B5651D] shadow-sm transform transition-transform" data-hex="#B5651D" data-name="Caramelo" type="button"></button>
+<button aria-label="Café" class="color-dot w-7 h-7 rounded-full bg-[#5C4033] shadow-sm transform transition-transform" data-hex="#5C4033" data-name="Café" type="button"></button>
+<button aria-label="Negro" class="color-dot w-7 h-7 rounded-full bg-[#1A1A1A] shadow-sm transform transition-transform" data-hex="#1A1A1A" data-name="Negro" type="button"></button>
+</div>
+<!-- Consult Action -->
+<a class="btn-consultar mt-space-md w-full py-2.5 px-4 rounded-lg bg-surface-container-high hover:bg-tertiary hover:text-on-tertiary text-primary font-label-lg text-label-lg text-center flex items-center justify-center gap-2 transition-all" href="https://wa.me/51957768282?text=Hola%20Carolina%20Hobant,%20deseo%20consultar%20por%20el%20sombrero%20Paja%20Cl%C3%A1sico%20en%20color%20Crema%20a%20S/%2060" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Consultar por WhatsApp</span>
+</a>
+</div>
+</article>
+<!-- Product 2: Ala Ancha -->
+<article class="product-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between" data-color="Arena" data-color-hex="#EADBC8" data-model="Ala Ancha">
+<div>
+<div class="hat-visual w-full aspect-[4/3] rounded-lg bg-surface-container flex items-center justify-center relative overflow-hidden transition-colors duration-300">
+<svg class="w-3/4 h-3/4" viewbox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+<ellipse class="hat-brim-base fill-[#eadbc8] transition-colors duration-300" cx="100" cy="115" rx="92" ry="24"></ellipse>
+<ellipse class="hat-tint fill-[#eadbc8] transition-colors duration-300" cx="100" cy="112" rx="88" ry="20"></ellipse>
+<path class="hat-tint fill-[#eadbc8] transition-colors duration-300" d="M64,110 C62,60 76,46 100,46 C124,46 138,60 136,110 Z"></path>
+<path d="M64,106 C80,111 120,111 136,106 L136,112 C120,116 80,116 64,112 Z" fill="#3e7c9b"></path>
+</svg>
+<span class="absolute top-2 right-2 px-2 py-0.5 rounded bg-surface text-secondary font-label-sm text-label-sm shadow-sm">
+              S/ 60
+            </span>
+</div>
+<div class="mt-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary">Ala Ancha</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Máxima protección y porte distinguido con caída fluida natural para tardes de sol intenso.
+            </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold selected-color-label">Color: Arena</span>
+<span class="font-label-sm text-label-sm text-tertiary">Caída suave</span>
+</div>
+<div class="flex items-center justify-between gap-1.5 color-picker-group py-1">
+<button aria-label="Crema" class="color-dot w-7 h-7 rounded-full bg-[#FDFBF7] shadow-sm transform transition-transform" data-hex="#FDFBF7" data-name="Crema" type="button"></button>
+<button aria-label="Arena" class="color-dot w-7 h-7 rounded-full bg-[#EADBC8] shadow-sm transform transition-transform scale-110 ring-2 ring-primary" data-hex="#EADBC8" data-name="Arena" type="button"></button>
+<button aria-label="Miel" class="color-dot w-7 h-7 rounded-full bg-[#D4A373] shadow-sm transform transition-transform" data-hex="#D4A373" data-name="Miel" type="button"></button>
+<button aria-label="Caramelo" class="color-dot w-7 h-7 rounded-full bg-[#B5651D] shadow-sm transform transition-transform" data-hex="#B5651D" data-name="Caramelo" type="button"></button>
+<button aria-label="Café" class="color-dot w-7 h-7 rounded-full bg-[#5C4033] shadow-sm transform transition-transform" data-hex="#5C4033" data-name="Café" type="button"></button>
+<button aria-label="Negro" class="color-dot w-7 h-7 rounded-full bg-[#1A1A1A] shadow-sm transform transition-transform" data-hex="#1A1A1A" data-name="Negro" type="button"></button>
+</div>
+<a class="btn-consultar mt-space-md w-full py-2.5 px-4 rounded-lg bg-surface-container-high hover:bg-tertiary hover:text-on-tertiary text-primary font-label-lg text-label-lg text-center flex items-center justify-center gap-2 transition-all" href="https://wa.me/51957768282?text=Hola%20Carolina%20Hobant,%20deseo%20consultar%20por%20el%20sombrero%20Ala%20Ancha%20en%20color%20Arena%20a%20S/%2060" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Consultar por WhatsApp</span>
+</a>
+</div>
+</article>
+<!-- Product 3: Estilo Panamá -->
+<article class="product-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between" data-color="Crema" data-color-hex="#FDFBF7" data-model="Estilo Panamá">
+<div>
+<div class="hat-visual w-full aspect-[4/3] rounded-lg bg-surface-container flex items-center justify-center relative overflow-hidden transition-colors duration-300">
+<svg class="w-3/4 h-3/4" viewbox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+<ellipse class="hat-brim-base fill-[#eadbc8] transition-colors duration-300" cx="100" cy="112" rx="74" ry="18"></ellipse>
+<ellipse class="hat-tint fill-[#fdfbf7] transition-colors duration-300" cx="100" cy="110" rx="70" ry="16"></ellipse>
+<!-- Crown with distinct top groove -->
+<path class="hat-tint fill-[#fdfbf7] transition-colors duration-300" d="M72,108 C68,76 74,54 88,54 C94,54 96,62 100,62 C104,62 106,54 112,54 C126,54 132,76 128,108 Z"></path>
+<path d="M72,102 C82,106 118,106 128,102 L128,109 C118,113 82,113 72,109 Z" fill="#1A1A1A"></path>
+</svg>
+<span class="absolute top-2 right-2 px-2 py-0.5 rounded bg-surface text-secondary font-label-sm text-label-sm shadow-sm">
+              S/ 60
+            </span>
+</div>
+<div class="mt-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary">Estilo Panamá</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Tejido refinado con cinta distintiva y elegancia atemporal que realza cualquier atuendo de resort.
+            </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold selected-color-label">Color: Crema</span>
+<span class="font-label-sm text-label-sm text-tertiary">Clásico chic</span>
+</div>
+<div class="flex items-center justify-between gap-1.5 color-picker-group py-1">
+<button aria-label="Crema" class="color-dot w-7 h-7 rounded-full bg-[#FDFBF7] shadow-sm transform transition-transform scale-110 ring-2 ring-primary" data-hex="#FDFBF7" data-name="Crema" type="button"></button>
+<button aria-label="Arena" class="color-dot w-7 h-7 rounded-full bg-[#EADBC8] shadow-sm transform transition-transform" data-hex="#EADBC8" data-name="Arena" type="button"></button>
+<button aria-label="Miel" class="color-dot w-7 h-7 rounded-full bg-[#D4A373] shadow-sm transform transition-transform" data-hex="#D4A373" data-name="Miel" type="button"></button>
+<button aria-label="Caramelo" class="color-dot w-7 h-7 rounded-full bg-[#B5651D] shadow-sm transform transition-transform" data-hex="#B5651D" data-name="Caramelo" type="button"></button>
+<button aria-label="Café" class="color-dot w-7 h-7 rounded-full bg-[#5C4033] shadow-sm transform transition-transform" data-hex="#5C4033" data-name="Café" type="button"></button>
+<button aria-label="Negro" class="color-dot w-7 h-7 rounded-full bg-[#1A1A1A] shadow-sm transform transition-transform" data-hex="#1A1A1A" data-name="Negro" type="button"></button>
+</div>
+<a class="btn-consultar mt-space-md w-full py-2.5 px-4 rounded-lg bg-surface-container-high hover:bg-tertiary hover:text-on-tertiary text-primary font-label-lg text-label-lg text-center flex items-center justify-center gap-2 transition-all" href="https://wa.me/51957768282?text=Hola%20Carolina%20Hobant,%20deseo%20consultar%20por%20el%20sombrero%20Estilo%20Panam%C3%A1%20en%20color%20Crema%20a%20S/%2060" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Consultar por WhatsApp</span>
+</a>
+</div>
+</article>
+<!-- Product 4: Bucket Hat -->
+<article class="product-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between" data-color="Miel" data-color-hex="#D4A373" data-model="Bucket Hat">
+<div>
+<div class="hat-visual w-full aspect-[4/3] rounded-lg bg-surface-container flex items-center justify-center relative overflow-hidden transition-colors duration-300">
+<svg class="w-3/4 h-3/4" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+<ellipse class="hat-brim-base fill-[#eadbc8] transition-colors duration-300" cx="100" cy="112" rx="76" ry="18"></ellipse>
+<ellipse class="hat-tint fill-[#d4a373] transition-colors duration-300" cx="100" cy="109" rx="72" ry="15"></ellipse>
+<path class="hat-tint fill-[#d4a373] transition-colors duration-300" d="M68,106 L72,62 C74,54 88,50 100,50 C112,50 126,54 128,62 L132,106 C116,112 84,112 68,106 Z"></path>
+<path d="M69,98 C84,104 116,104 131,98 L132,106 C116,112 84,112 68,106 Z" fill="#894f3b"></path>
+<path d="M72,62 C86,68 114,68 128,62" fill="none" stroke="#000" stroke-opacity=".12" stroke-width="2"></path>
+</svg>
+<span class="absolute top-2 right-2 px-2 py-0.5 rounded bg-surface text-secondary font-label-sm text-label-sm shadow-sm">
+              S/ 60
+            </span>
+</div>
+<div class="mt-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary">Bucket Hat</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Silueta moderna y relajada para escapadas a la orilla del mar, adaptable y fácil de llevar.
+            </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold selected-color-label">Color: Miel</span>
+<span class="font-label-sm text-label-sm text-tertiary">Tendencia fresca</span>
+</div>
+<div class="flex items-center justify-between gap-1.5 color-picker-group py-1">
+<button aria-label="Crema" class="color-dot w-7 h-7 rounded-full bg-[#FDFBF7] shadow-sm transform transition-transform" data-hex="#FDFBF7" data-name="Crema" type="button"></button>
+<button aria-label="Arena" class="color-dot w-7 h-7 rounded-full bg-[#EADBC8] shadow-sm transform transition-transform" data-hex="#EADBC8" data-name="Arena" type="button"></button>
+<button aria-label="Miel" class="color-dot w-7 h-7 rounded-full bg-[#D4A373] shadow-sm transform transition-transform scale-110 ring-2 ring-primary" data-hex="#D4A373" data-name="Miel" type="button"></button>
+<button aria-label="Caramelo" class="color-dot w-7 h-7 rounded-full bg-[#B5651D] shadow-sm transform transition-transform" data-hex="#B5651D" data-name="Caramelo" type="button"></button>
+<button aria-label="Café" class="color-dot w-7 h-7 rounded-full bg-[#5C4033] shadow-sm transform transition-transform" data-hex="#5C4033" data-name="Café" type="button"></button>
+<button aria-label="Negro" class="color-dot w-7 h-7 rounded-full bg-[#1A1A1A] shadow-sm transform transition-transform" data-hex="#1A1A1A" data-name="Negro" type="button"></button>
+</div>
+<a class="btn-consultar mt-space-md w-full py-2.5 px-4 rounded-lg bg-surface-container-high hover:bg-tertiary hover:text-on-tertiary text-primary font-label-lg text-label-lg text-center flex items-center justify-center gap-2 transition-all" href="https://wa.me/51957768282?text=Hola%20Carolina%20Hobant,%20deseo%20consultar%20por%20el%20sombrero%20Bucket%20Hat%20en%20color%20Miel%20a%20S/%2060" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Consultar por WhatsApp</span>
+</a>
+</div>
+</article>
+<!-- Product 5: Visera Abierta -->
+<article class="product-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between" data-color="Caramelo" data-color-hex="#B5651D" data-model="Visera Abierta">
+<div>
+<div class="hat-visual w-full aspect-[4/3] rounded-lg bg-surface-container flex items-center justify-center relative overflow-hidden transition-colors duration-300">
+<svg class="w-3/4 h-3/4" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+<path class="hat-tint fill-[#b5651d] transition-colors duration-300" d="M46,96 C48,100 152,100 154,96 C166,142 34,142 46,96 Z"></path>
+<path d="M46,96 C48,100 152,100 154,96 C166,142 34,142 46,96 Z" fill="#000" fill-opacity=".14"></path>
+<ellipse cx="100" cy="80" rx="48" ry="12" fill="#2b2b2b" fill-opacity=".18"></ellipse>
+<path class="hat-tint fill-[#b5651d] transition-colors duration-300" d="M52,80 L52,100 C52,114 148,114 148,100 L148,80 C148,94 52,94 52,80 Z"></path>
+<path d="M52,90 C52,102 148,102 148,90 L148,96 C148,108 52,108 52,96 Z" fill="#3e7c9b"></path>
+<path d="M52,80 C52,66 148,66 148,80" fill="none" stroke="#ede1cf" stroke-width="2"></path>
+</svg>
+<span class="absolute top-2 right-2 px-2 py-0.5 rounded bg-surface text-secondary font-label-sm text-label-sm shadow-sm">
+              S/ 60
+            </span>
+</div>
+<div class="mt-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary">Visera Abierta</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Frescura total y comodidad práctica para paseos matutinos y atardeceres frente al mar.
+            </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold selected-color-label">Color: Caramelo</span>
+<span class="font-label-sm text-label-sm text-tertiary">Comodidad pura</span>
+</div>
+<div class="flex items-center justify-between gap-1.5 color-picker-group py-1">
+<button aria-label="Crema" class="color-dot w-7 h-7 rounded-full bg-[#FDFBF7] shadow-sm transform transition-transform" data-hex="#FDFBF7" data-name="Crema" type="button"></button>
+<button aria-label="Arena" class="color-dot w-7 h-7 rounded-full bg-[#EADBC8] shadow-sm transform transition-transform" data-hex="#EADBC8" data-name="Arena" type="button"></button>
+<button aria-label="Miel" class="color-dot w-7 h-7 rounded-full bg-[#D4A373] shadow-sm transform transition-transform" data-hex="#D4A373" data-name="Miel" type="button"></button>
+<button aria-label="Caramelo" class="color-dot w-7 h-7 rounded-full bg-[#B5651D] shadow-sm transform transition-transform scale-110 ring-2 ring-primary" data-hex="#B5651D" data-name="Caramelo" type="button"></button>
+<button aria-label="Café" class="color-dot w-7 h-7 rounded-full bg-[#5C4033] shadow-sm transform transition-transform" data-hex="#5C4033" data-name="Café" type="button"></button>
+<button aria-label="Negro" class="color-dot w-7 h-7 rounded-full bg-[#1A1A1A] shadow-sm transform transition-transform" data-hex="#1A1A1A" data-name="Negro" type="button"></button>
+</div>
+<a class="btn-consultar mt-space-md w-full py-2.5 px-4 rounded-lg bg-surface-container-high hover:bg-tertiary hover:text-on-tertiary text-primary font-label-lg text-label-lg text-center flex items-center justify-center gap-2 transition-all" href="https://wa.me/51957768282?text=Hola%20Carolina%20Hobant,%20deseo%20consultar%20por%20el%20sombrero%20Visera%20Abierta%20en%20color%20Caramelo%20a%20S/%2060" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Consultar por WhatsApp</span>
+</a>
+</div>
+</article>
+<!-- Product 6: Tejido a Mano -->
+<article class="product-card bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between" data-color="Café" data-color-hex="#5C4033" data-model="Tejido a Mano">
+<div>
+<div class="hat-visual w-full aspect-[4/3] rounded-lg bg-surface-container flex items-center justify-center relative overflow-hidden transition-colors duration-300">
+<svg class="w-3/4 h-3/4" viewbox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+<ellipse class="hat-brim-base fill-[#eadbc8] transition-colors duration-300" cx="100" cy="112" rx="82" ry="20"></ellipse>
+<ellipse class="hat-tint fill-[#5c4033] transition-colors duration-300" cx="100" cy="109" rx="78" ry="17"></ellipse>
+<!-- Organic woven dome -->
+<path class="hat-tint fill-[#5c4033] transition-colors duration-300" d="M66,108 C64,65 74,45 100,45 C126,45 136,65 134,108 Z"></path>
+<path d="M66,102 C82,107 118,107 134,102 L134,109 C118,114 82,114 66,109 Z" fill="#d4a373"></path>
+</svg>
+<span class="absolute top-2 right-2 px-2 py-0.5 rounded bg-surface text-secondary font-label-sm text-label-sm shadow-sm">
+              S/ 60
+            </span>
+</div>
+<div class="mt-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary">Tejido a Mano</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Textura orgánica y diseño rústico de edición exclusiva, cada nudo cuenta una historia litoral.
+            </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold selected-color-label">Color: Café</span>
+<span class="font-label-sm text-label-sm text-tertiary">Edición limitada</span>
+</div>
+<div class="flex items-center justify-between gap-1.5 color-picker-group py-1">
+<button aria-label="Crema" class="color-dot w-7 h-7 rounded-full bg-[#FDFBF7] shadow-sm transform transition-transform" data-hex="#FDFBF7" data-name="Crema" type="button"></button>
+<button aria-label="Arena" class="color-dot w-7 h-7 rounded-full bg-[#EADBC8] shadow-sm transform transition-transform" data-hex="#EADBC8" data-name="Arena" type="button"></button>
+<button aria-label="Miel" class="color-dot w-7 h-7 rounded-full bg-[#D4A373] shadow-sm transform transition-transform" data-hex="#D4A373" data-name="Miel" type="button"></button>
+<button aria-label="Caramelo" class="color-dot w-7 h-7 rounded-full bg-[#B5651D] shadow-sm transform transition-transform" data-hex="#B5651D" data-name="Caramelo" type="button"></button>
+<button aria-label="Café" class="color-dot w-7 h-7 rounded-full bg-[#5C4033] shadow-sm transform transition-transform scale-110 ring-2 ring-primary" data-hex="#5C4033" data-name="Café" type="button"></button>
+<button aria-label="Negro" class="color-dot w-7 h-7 rounded-full bg-[#1A1A1A] shadow-sm transform transition-transform" data-hex="#1A1A1A" data-name="Negro" type="button"></button>
+</div>
+<a class="btn-consultar mt-space-md w-full py-2.5 px-4 rounded-lg bg-surface-container-high hover:bg-tertiary hover:text-on-tertiary text-primary font-label-lg text-label-lg text-center flex items-center justify-center gap-2 transition-all" href="https://wa.me/51957768282?text=Hola%20Carolina%20Hobant,%20deseo%20consultar%20por%20el%20sombrero%20Tejido%20a%20Mano%20en%20color%20Caf%C3%A9%20a%20S/%2060" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Consultar por WhatsApp</span>
+</a>
+</div>
+</article>
+</div>
+</section>
+<!-- CUSTOMIZATION SECTION: TU NOMBRE EN TU SOMBRERO -->
+<section class="w-full px-margin-mobile py-space-xl flex flex-col items-center bg-surface-container-low" id="tu-nombre">
+<div class="text-center max-w-sm mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Personalización Única</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mt-1">Tu nombre en tu sombrero</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+        Personaliza tu sombrero artesanal con tu nombre o iniciales bordadas en la cinta exclusiva.
+      </p>
+</div>
+<!-- Live Preview Canvas & Customizer Card -->
+<div class="w-full max-w-md bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col">
+<!-- Live SVG Ribbon Preview -->
+<div class="w-full aspect-[4/3] rounded-lg bg-surface-container flex flex-col items-center justify-center relative overflow-hidden">
+<svg class="w-full h-full" id="customPreviewSvg" viewbox="0 0 240 180" xmlns="http://www.w3.org/2000/svg">
+<!-- Hat Silhouette in Customizer -->
+<ellipse cx="120" cy="128" fill="#eadbc8" id="customBrim" rx="96" ry="24"></ellipse>
+<ellipse cx="120" cy="125" fill="#fdfbf7" id="customBrimInner" rx="90" ry="20"></ellipse>
+<path d="M78,122 C74,80 88,54 120,54 C152,54 166,80 162,122 Z" fill="#fdfbf7" id="customCrown"></path>
+<!-- Ribbon Band with Curved Text Path -->
+<path d="M 78,118 Q 120,126 162,118" fill="none" id="ribbonPath" stroke="#3e7c9b" stroke-linecap="round" stroke-width="14"></path>
+<text fill="#ffffff" font-family="'EB Garamond', serif" font-size="11" font-style="italic" font-weight="600" letter-spacing="1">
+<textpath href="#ribbonPath" id="svgRibbonText" startoffset="50%" text-anchor="middle">Carolina</textpath>
+</text>
+</svg>
+<div class="absolute bottom-2 left-3 right-3 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Bordado artesanal</span>
+<span class="text-tertiary font-bold">Sin costo adicional</span>
+</div>
+</div>
+<!-- Color Selection for Preview Hat -->
+<div class="mt-space-md flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Tono de base:</span>
+<div class="flex gap-2" id="customColorPicker">
+<button aria-label="Crema" class="w-6 h-6 rounded-full bg-[#FDFBF7] shadow-sm ring-2 ring-primary custom-color-choice" data-hex="#FDFBF7" type="button"></button>
+<button aria-label="Arena" class="w-6 h-6 rounded-full bg-[#EADBC8] shadow-sm custom-color-choice" data-hex="#EADBC8" type="button"></button>
+<button aria-label="Miel" class="w-6 h-6 rounded-full bg-[#D4A373] shadow-sm custom-color-choice" data-hex="#D4A373" type="button"></button>
+<button aria-label="Caramelo" class="w-6 h-6 rounded-full bg-[#B5651D] shadow-sm custom-color-choice" data-hex="#B5651D" type="button"></button>
+<button aria-label="Café" class="w-6 h-6 rounded-full bg-[#5C4033] shadow-sm custom-color-choice" data-hex="#5C4033" type="button"></button>
+<button aria-label="Negro" class="w-6 h-6 rounded-full bg-[#1A1A1A] shadow-sm custom-color-choice" data-hex="#1A1A1A" type="button"></button>
+</div>
+</div>
+<!-- Interactive Input Form -->
+<div class="mt-space-md flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<label class="font-semibold" for="customNameInput">Tu nombre o iniciales</label>
+<span class="text-secondary font-bold" id="charCounter">8/14 caracteres</span>
+</div>
+<div class="relative">
+<input class="w-full px-4 py-3 rounded-lg bg-surface font-title-md text-title-md text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" id="customNameInput" maxlength="14" placeholder="Ej: Sofia M." type="text" value="Carolina"/>
+<span class="absolute right-3 top-3.5 material-symbols-outlined text-tertiary text-[20px] pointer-events-none">draw</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          Máximo 14 caracteres. Letras, espacios y acentos permitidos.
+        </p>
+</div>
+<!-- Call to Action Button -->
+<a class="mt-space-md w-full py-3.5 px-6 rounded-lg bg-tertiary hover:bg-tertiary-container active:scale-95 text-on-tertiary font-title-md text-title-md text-center shadow-md transition-all flex items-center justify-center gap-2" href="https://wa.me/51957768282?text=Hola,%20quiero%20un%20sombrero%20con%20el%20nombre:%20Carolina" id="btnOrderCustom" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Pedir con mi nombre</span>
+</a>
+</div>
+</section>
+<!-- HIGHLIGHTED PRICE SECTION -->
+<section class="w-full px-margin-mobile py-space-xl flex flex-col items-center" id="precios">
+<div class="w-full max-w-md bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex flex-col items-center text-center relative overflow-hidden">
+<!-- Top Decorative Ribbon -->
+<div class="absolute -top-12 -right-12 w-28 h-28 bg-surface-container-high rounded-full pointer-events-none"></div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-tertiary font-bold mb-1">
+        Transparencia Total
+      </span>
+<h2 class="font-headline-md text-headline-md text-primary">Tarifa Única Artesanal</h2>
+<!-- Big Price Display -->
+<div class="my-space-md flex items-baseline justify-center gap-1">
+<span class="font-display-lg-mobile text-display-lg-mobile text-primary font-normal">S/ 60</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">/ pieza</span>
+</div>
+<!-- Exact Required Text Highlight -->
+<div class="bg-surface-container-low rounded-lg p-3.5 mb-space-md max-w-xs">
+<p class="font-body-md text-body-md text-on-surface font-semibold leading-relaxed">
+          Todos los sombreros a S/ 60 cada uno, en cualquier tipo y color, con envío gratis a todo el país.
+        </p>
+</div>
+<!-- Color Palette Showcase -->
+<div class="w-full flex flex-col items-center mb-space-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-2">Disponible en los 6 tonos naturales:</span>
+<div class="flex items-center justify-center gap-2 flex-wrap">
+<div class="flex flex-col items-center gap-1">
+<span class="w-7 h-7 rounded-full bg-[#FDFBF7] shadow-sm"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Crema</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="w-7 h-7 rounded-full bg-[#EADBC8] shadow-sm"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Arena</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="w-7 h-7 rounded-full bg-[#D4A373] shadow-sm"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Miel</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="w-7 h-7 rounded-full bg-[#B5651D] shadow-sm"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Caramelo</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="w-7 h-7 rounded-full bg-[#5C4033] shadow-sm"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Café</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="w-7 h-7 rounded-full bg-[#1A1A1A] shadow-sm"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Negro</span>
+</div>
+</div>
+</div>
+<!-- Included Benefits Checklist -->
+<div class="w-full flex flex-col gap-2.5 text-left bg-surface-container/60 rounded-lg p-4 mb-space-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Tejido natural resistente</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Cinta personalizada opcional</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Empaque protector ecológico</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Envío gratis a todo el Perú</span>
+</div>
+</div>
+<!-- Action Button -->
+<a class="w-full py-3.5 px-6 rounded-lg bg-primary hover:bg-on-primary-fixed-variant active:scale-95 text-on-primary font-title-md text-title-md text-center shadow-md transition-all" href="https://wa.me/51957768282?text=Hola,%20deseo%20aprovechar%20la%20tarifa%20de%20S/%2060%20con%20env%C3%ADo%20gratis" rel="noopener noreferrer" target="_blank">
+        Comprar ahora por S/ 60
+      </a>
+</div>
+</section>
+<!-- ABOUT US SECTION -->
+<section class="w-full px-margin-mobile py-space-xl flex flex-col items-center bg-surface-container-low" id="nosotros">
+<div class="w-full max-w-md flex flex-col">
+<!-- Artisan Storytelling -->
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Tradición Costera</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mt-1 mb-space-sm">
+        El Alma de Carolina Hobant
+      </h2>
+<!-- Story visual block -->
+<div class="w-full aspect-[16/10] rounded-xl overflow-hidden mb-space-md relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Close up warm artisanal hands delicately weaving organic natural toquilla straw fibers on a sunlit seaside wooden table with ocean waves in soft focus background, quiet slow lifestyle resort atmosphere, terracotta and sage tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVAyF4k7lmEfoFuBj_17R2Kdfm0ZdrqHTQV1ax7ypOkfO6WHXAxzf3ikzkmskGZlIbnSR4PAiQeIOyK2ZDXcTAUoR1vNaRn_St1CW5rA9uJPCOs_2qOIjDSAs95MOGb2cW53Bya1l4nlHl7iifvxm6E9Doum9oXmYk3XDIU8zMkcQQ1jfW2-aKMPfwOIZ2Bb2KTmWPFXFr65dZabnnURJrXwrcnj_ej4RNEeXPLulCoBeZ8phgVKLDvQ"/>
+<div class="absolute bottom-2 left-2 px-2.5 py-1 rounded bg-surface-container-lowest/90 font-label-sm text-label-sm text-primary">
+          Taller frente al mar
+        </div>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant flex flex-col gap-space-sm leading-relaxed mb-space-lg">
+<p>
+          Carolina Hobant nació a orillas del Pacífico como un tributo a la calma de las mañanas de verano y al tejido tradicional de paja toquilla. Cada pieza es elaborada sin prisas, honrando el ritmo orgánico de las fibras naturales y el saber ancestral de nuestras maestras tejedoras.
+        </p>
+<p>
+          Creemos en la moda ética, biodegradable y duradera: sombreros que te acompañan durante años bajo el sol, guardando la memoria del salitre, la brisa y tus descansos más plenos.
+        </p>
+</div>
+<!-- 3 Key Values Pills -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm p-3.5 rounded-lg bg-surface-container-lowest shadow-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">eco</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-primary">Fibras 100% Naturales</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Materiales puros y biodegradables recolectados responsablemente.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-3.5 rounded-lg bg-surface-container-lowest shadow-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">volunteer_activism</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-primary">Comercio Justo Artesanal</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Retribución digna y reconocimiento a cada artesano de la costa.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-3.5 rounded-lg bg-surface-container-lowest shadow-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">water</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-primary">Inspiración Marina</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Siluetas ligeras pensadas para acompañar cada puesta de sol.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TESTIMONIALS SECTION -->
+<section class="w-full px-margin-mobile py-space-xl flex flex-col items-center">
+<div class="text-center max-w-sm mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Experiencias</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mt-1">Lo que dicen nuestras clientas</h2>
+</div>
+<!-- 3 Testimonial Cards -->
+<div class="w-full max-w-md flex flex-col gap-space-md">
+<!-- Review 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center gap-1 text-[#D4A373] mb-space-xs">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic mb-space-sm leading-relaxed">
+          "Mi sombrero de ala ancha llegó perfecto a Cusco. El detalle de mi nombre en la cinta es delicado y hermoso."
+        </p>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-title-md text-title-md text-primary font-bold">Mariana S.</span>
+<span class="font-label-sm text-label-sm">Cusco, Perú</span>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center gap-1 text-[#D4A373] mb-space-xs">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic mb-space-sm leading-relaxed">
+          "La calidad de la paja y el color miel es insuperable. Me acompañó todo el verano en Máncora."
+        </p>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-title-md text-title-md text-primary font-bold">Camila R.</span>
+<span class="font-label-sm text-label-sm">Lima, Perú</span>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center gap-1 text-[#D4A373] mb-space-xs">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic mb-space-sm leading-relaxed">
+          "Increíble que por S/ 60 con envío gratis tenga un sombrero tan fino. La atención por WhatsApp fue rápida y amable."
+        </p>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-title-md text-title-md text-primary font-bold">Valeria P.</span>
+<span class="font-label-sm text-label-sm">Arequipa, Perú</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CONTACT SECTION -->
+<section class="w-full px-margin-mobile py-space-xl flex flex-col items-center bg-surface-container-low" id="contacto">
+<div class="w-full max-w-md flex flex-col">
+<div class="text-center mb-space-lg">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Atención Personalizada</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mt-1">Escríbenos con Calma</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          ¿Tienes alguna duda sobre tallas, pedidos corporativos o tiempos de entrega? Estamos para ayudarte.
+        </p>
+</div>
+<!-- Fast WhatsApp Action -->
+<a class="w-full py-3.5 px-4 rounded-xl bg-tertiary text-on-tertiary shadow-md flex items-center justify-center gap-3 mb-space-lg hover:bg-tertiary-container transition-all" href="https://wa.me/51957768282" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[24px]">chat</span>
+<div class="text-left">
+<span class="font-label-sm text-label-sm block opacity-90">WhatsApp Directo</span>
+<span class="font-title-md text-title-md font-bold">+51 957 768 282</span>
+</div>
+</a>
+<!-- Clean Contact Form -->
+<form class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm" onsubmit="event.preventDefault(); alert('¡Gracias por tu mensaje! Te responderemos muy pronto.');">
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface-variant mb-1">Nombre</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg bg-surface font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" placeholder="Tu nombre" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface-variant mb-1">Correo Electrónico</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg bg-surface font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-inner" placeholder="tu@correo.com" required="" type="email"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface-variant mb-1">Mensaje</label>
+<textarea class="w-full px-3.5 py-2.5 rounded-lg bg-surface font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-inner resize-none" placeholder="Cuéntanos qué modelo o consulta tienes..." required="" rows="3"></textarea>
+</div>
+<button class="mt-2 w-full py-3 px-6 rounded-lg bg-secondary text-on-secondary font-title-md text-title-md hover:opacity-90 active:scale-95 transition-all shadow-sm" type="submit">
+          Enviar mensaje
+        </button>
+</form>
+</div>
+</section>
+</div>
+<!-- Micro-Interactions Client-Side Vanilla JS -->
+<script>
+  (function initCarolinaHobant() {
+    // 1. Collection Color Pickers Logic
+    const productCards = document.querySelectorAll('.product-card');
+
+    productCards.forEach((card) => {
+      const dots = card.querySelectorAll('.color-dot');
+      const label = card.querySelector('.selected-color-label');
+      const hatVisual = card.querySelector('.hat-visual');
+      const hatTints = card.querySelectorAll('.hat-tint');
+      const consultBtn = card.querySelector('.btn-consultar');
+      const modelName = card.getAttribute('data-model') || 'Sombrero';
+
+      dots.forEach((dot) => {
+        dot.addEventListener('click', () => {
+          const colorName = dot.getAttribute('data-name');
+          const hex = dot.getAttribute('data-hex');
+
+          // Highlight selected dot
+          dots.forEach((d) => {
+            d.classList.remove('scale-110', 'ring-2', 'ring-primary');
+          });
+          dot.classList.add('scale-110', 'ring-2', 'ring-primary');
+
+          // Update label
+          if (label) {
+            label.textContent = `Color: ${colorName}`;
+          }
+
+          // Update Hat Tint SVGs
+          hatTints.forEach((el) => {
+            el.style.fill = hex;
+          });
+
+          // Dynamic WhatsApp link update
+          if (consultBtn) {
+            const message = encodeURIComponent(`Hola Carolina Hobant, deseo consultar por el sombrero ${modelName} en color ${colorName} a S/ 60`);
+            consultBtn.setAttribute('href', `https://wa.me/51957768282?text=${message}`);
+          }
+        });
+      });
+    });
+
+    // 2. Real-Time Customizer Logic (Tu Nombre en tu Sombrero)
+    const nameInput = document.getElementById('customNameInput');
+    const svgRibbonText = document.getElementById('svgRibbonText');
+    const charCounter = document.getElementById('charCounter');
+    const btnOrderCustom = document.getElementById('btnOrderCustom');
+    const customColorButtons = document.querySelectorAll('.custom-color-choice');
+    const customCrown = document.getElementById('customCrown');
+    const customBrimInner = document.getElementById('customBrimInner');
+
+    function updateCustomizer() {
+      if (!nameInput) return;
+      const text = nameInput.value.trim() || 'Carolina';
+      const charCount = nameInput.value.length;
+
+      if (svgRibbonText) {
+        svgRibbonText.textContent = text;
+      }
+
+      if (charCounter) {
+        charCounter.textContent = `${charCount}/14 caracteres`;
+      }
+
+      if (btnOrderCustom) {
+        const msg = encodeURIComponent(`Hola, quiero un sombrero con el nombre: ${text}`);
+        btnOrderCustom.setAttribute('href', `https://wa.me/51957768282?text=${msg}`);
+      }
+    }
+
+    if (nameInput) {
+      nameInput.addEventListener('input', updateCustomizer);
+    }
+
+    customColorButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const hex = btn.getAttribute('data-hex');
+        customColorButtons.forEach((b) => b.classList.remove('ring-2', 'ring-primary'));
+        btn.classList.add('ring-2', 'ring-primary');
+
+        if (customCrown) customCrown.setAttribute('fill', hex);
+        if (customBrimInner) customBrimInner.setAttribute('fill', hex);
+      });
+    });
+
+    // 3. Smooth scrolling for internal anchor clicks
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId && targetId !== '#') {
+          const targetElem = document.querySelector(targetId);
+          if (targetElem) {
+            e.preventDefault();
+            targetElem.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }
+      });
+    });
+  })();
+</script><footer class="w-full bg-surface-container-low px-margin-mobile py-space-xl mt-space-xl flex flex-col items-center text-center"><span class="font-headline-md text-headline-md text-on-surface tracking-wider mb-space-xs">Carolina Hobant</span><p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs mb-space-lg italic">Sombreros artesanales de paja toquilla y diseño de autor para veranos eternos.</p><div class="flex flex-wrap justify-center gap-x-space-lg gap-y-space-sm font-label-md text-label-md text-primary mb-space-lg"><a class="hover:text-secondary" data-path="inicio" href="#">Inicio</a><a class="hover:text-secondary" data-path="coleccion" href="#">Colección</a><a class="hover:text-secondary" data-path="precios" href="#">Precios</a><a class="hover:text-secondary" data-path="tu-nombre" href="#">Tu Nombre</a><a class="hover:text-secondary" data-path="nosotros" href="#">Nosotros</a><a class="hover:text-secondary" data-path="contacto" href="#">Contacto</a></div><div class="flex items-center justify-center gap-space-md mb-space-lg"><a aria-label="Instagram" class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">photo_camera</span></a><a aria-label="Facebook" class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">public</span></a><a aria-label="Pinterest" class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">interests</span></a></div><p class="font-label-sm text-label-sm text-outline">© 2024 Carolina Hobant. Todos los derechos reservados. Hecho a mano con calma costera.</p></footer></main><a aria-label="Contactar por WhatsApp" class="fixed bottom-24 right-4 z-50 w-14 h-14 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shadow-[0_12px_32px_-4px_rgba(18,103,100,0.35)] active:scale-95 transition-transform" href="https://wa.me/51957768282" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[26px]">chat</span></a><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_16px_rgba(43,74,90,0.06)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-20 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-1 w-14 h-14 transition-colors text-primary font-bold" data-path="inicio" href="#"><span class="material-symbols-outlined text-[22px]">cottage</span><span class="font-label-sm text-label-sm">Inicio</span></a><a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-on-surface-variant transition-colors" data-path="coleccion" href="#"><span class="material-symbols-outlined text-[22px]">styler</span><span class="font-label-sm text-label-sm">Colección</span></a><a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-on-surface-variant transition-colors" data-path="precios" href="#"><span class="material-symbols-outlined text-[22px]">sell</span><span class="font-label-sm text-label-sm">Precios</span></a><a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-on-surface-variant transition-colors" data-path="tu-nombre" href="#"><span class="material-symbols-outlined text-[22px]">draw</span><span class="font-label-sm text-label-sm">Personaliza</span></a><a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-on-surface-variant transition-colors" data-path="nosotros" href="#"><span class="material-symbols-outlined text-[22px]">spa</span><span class="font-label-sm text-label-sm">Nosotros</span></a><a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-on-surface-variant transition-colors" data-path="contacto" href="#"><span class="material-symbols-outlined text-[22px]">contact_mail</span><span class="font-label-sm text-label-sm">Contacto</span></a></div></nav></body></html>
